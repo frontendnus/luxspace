@@ -1,11 +1,15 @@
-import "./assets/css/style.css";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import HomePage from "pages/HomePage";
 
-function App() {
+import "assets/css/style.css";
+
+const App = () => {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello</h1>
-    </div>
+    <Router>
+      <Route path="/" component={HomePage} />
+    </Router>
   );
-}
+};
 
 export default App;
